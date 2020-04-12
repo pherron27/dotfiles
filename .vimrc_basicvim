@@ -1,10 +1,5 @@
 set nocompatible              " required
 set shell=/bin/bash
-if has('nvim')
-    "set termguicolors
-    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
-    set guicursor=
-endif
 
 filetype off                  " required
 filetype plugin indent on
@@ -45,4 +40,3 @@ set ruler
 "endif
 
 set clipboard=unnamedplus
-
