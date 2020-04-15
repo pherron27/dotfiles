@@ -19,7 +19,7 @@ vnoremap <S-l> $
 "set hidden
 "set scrolloff=3
 set autoindent
-set nowrapscan
+set wrapscan
 set ttyfast
 "set wildmode=list:full
 "set wildignore+=*.pyc,*.o,*.obj.,*.d,.git,*.gcno,*.gcda,venv,*.class,*.jar
