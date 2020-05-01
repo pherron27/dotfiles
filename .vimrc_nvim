@@ -67,6 +67,15 @@ set ruler
 "    set nocursorline
 "endif
 
+" When editing a file, always jump to the last known cursor position.
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+" ...except for git commits
+autocmd FileType gitcommit execute "normal! ggm\""
+
 set clipboard=unnamedplus
 
 " Comments
