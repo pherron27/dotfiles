@@ -55,8 +55,6 @@ set number
 set ruler
 "set list
 "let &listchars="tab:▸ ,trail:·,extends:…,precedes:…"
-"set nowrap
-"set textwidth=100
 "set formatoptions-=t
 "set noerrorbells novisualbell t_vb=
 "set foldlevelstart=99
@@ -66,6 +64,11 @@ set ruler
 "else
 "    set nocursorline
 "endif
+
+" Search customization
+set hlsearch
+" Press Spacebar to turn off highlighting and clear any message already displayed
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " When editing a file, always jump to the last known cursor position.
 autocmd BufReadPost *
