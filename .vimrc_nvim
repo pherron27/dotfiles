@@ -53,6 +53,7 @@ set ttyfast
 "set wildignore+=*.pyc,*.o,*.obj.,*.d,.git,*.gcno,*.gcda,venv,*.class,*.jar
 set number
 set ruler
+set expandtab
 "set list
 "let &listchars="tab:▸ ,trail:·,extends:…,precedes:…"
 "set formatoptions-=t
