@@ -132,3 +132,18 @@ sshgo ()
 
 [[ $COLORTERM = gnome-terminal && ! $TERM = screen-256color ]] && TERM=xterm-256color
 
+# This is for the review-scraper python module that Ryan Hill wrote
+export REVIEW_SCRAPER_TOKEN=becc02f3b5418ca9746f634792f588953cc87cfe
+export REVIEW_SCRAPER_ORG=Pioneer
+
+alias run_review_scraper="review_scraper | grep -v '^$' | grep -v '[{}]' | awk '{a[\$1] += \$2} END {for (i in a) print i, a[i]}' | sort -t ':' --key=2nr"
+alias gs="git status"
+alias gcm="git checkout master"
+alias gpom="git pull origin master"
+alias gdi="git diff"
+
+# Change a few bash shell options
+shopt -s cdspell
+shopt -s cmdhist
+shopt -s dirspell
+

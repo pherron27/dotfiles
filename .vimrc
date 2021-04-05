@@ -3,7 +3,7 @@ set shell=/bin/bash
 if has('nvim')
     "set termguicolors
     let $NVIM_TUI_ENABLE_CURSOR_SHAPE=0
-    "set guicursor=
+    set guicursor=
 endif
 
 filetype off                  " required
@@ -23,7 +23,15 @@ Plugin 'tpope/vim-sensible'
 
 " color schemes
 Plugin 'lifepillar/vim-solarized8'
+
+" Nerdtree for file browsing
 Plugin 'scrooloose/nerdtree'
+
+" UltiSnips for tab expansion to various constructs
+Plugin 'SirVer/ultisnips'
+
+" Snippets for UltiSnips
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
@@ -39,7 +47,7 @@ vnoremap <S-h> ^
 nnoremap <S-l> $
 vnoremap <S-l> $
 
-" basic usability
+" Basic usability
 "set modelines=0
 "set hidden
 "set scrolloff=3
@@ -88,4 +96,12 @@ nmap <C-/> gcc
 let NERDTreeShowHidden=1
 nmap <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Trigger configuration for UltiSnips. You need to change this to something other than
+" <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
